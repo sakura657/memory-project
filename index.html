@@ -2,276 +2,78 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Understanding Memory: Implicit & Explicit</title>
-  <style>
-    body {
-      margin: 0;
-      padding: 0;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-      background-color: #f5f5f7;
-      color: #1d1d1f;
-      line-height: 1.6;
-    }
-
-    header {
-      background: linear-gradient(90deg, #007aff, #5856d6);
-      color: white;
-      text-align: center;
-      padding: 30px 15px;
-    }
-
-    header h1 {
-      font-size: 2.5rem;
-      font-weight: 600;
-      margin: 0;
-    }
-
-    section {
-      max-width: 800px;
-      margin: 30px auto;
-      background: white;
-      border-radius: 12px;
-      box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
-      padding: 30px;
-    }
-
-    section h2 {
-      font-size: 1.8rem;
-      font-weight: 600;
-      color: #333;
-      margin-bottom: 20px;
-    }
-
-    section h3 {
-      font-size: 1.4rem;
-      font-weight: 500;
-      margin-top: 20px;
-      color: #007aff;
-    }
-
-    section p {
-      font-size: 1rem;
-      margin: 10px 0;
-      color: #333;
-    }
-
-    a {
-      color: #007aff;
-      text-decoration: none;
-    }
-
-    a:hover {
-      text-decoration: underline;
-    }
-
-    img {
-      display: block;
-      max-width: 100%;
-      height: auto;
-      margin: 20px auto;
-      border-radius: 8px;
-    }
-
-    .quiz, .glossary, .faq {
-      margin: 30px 0;
-      padding: 20px;
-      background-color: #f9f9f9;
-      border-left: 4px solid #007aff;
-      border-radius: 12px;
-      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    }
-
-    .quiz ul {
-      list-style-type: none;
-      padding: 0;
-      margin: 10px 0;
-    }
-
-    .quiz ul li {
-      padding: 5px 10px;
-      margin: 5px 0;
-      background: #fff;
-      border: 1px solid #ddd;
-      border-radius: 6px;
-      cursor: pointer;
-    }
-
-    .quiz ul li:hover {
-      background-color: #eef6ff;
-      border: 1px solid #007aff;
-    }
-
-    .quiz button {
-      margin-top: 10px;
-      padding: 5px 10px;
-      background-color: #007aff;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      cursor: pointer;
-      transition: background-color 0.3s ease;
-    }
-
-    .quiz button:hover {
-      background-color: #005bb5;
-    }
-
-    .glossary dt {
-      font-weight: bold;
-      margin-top: 10px;
-    }
-
-    .glossary dd {
-      margin-left: 20px;
-    }
-
-    .faq h3 {
-      color: #007aff;
-      margin-top: 15px;
-    }
-
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #1d1d1f;
-      color: #f5f5f7;
-      font-size: 0.9rem;
-    }
-  </style>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Understanding Memory: Home</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
-  <header>
+  <header class="bg-primary text-white text-center py-4">
     <h1>Understanding Memory: Implicit & Explicit</h1>
   </header>
-
-  <section>
-    <h2>Introduction</h2>
-    <p>Memory is one of the most essential cognitive functions our brains perform. 
-      It helps us interpret the world, make decisions, and communicate with others. 
-      There are many ways to categorize memory, such as separating <strong>short-term memory</strong> and 
-      <strong>long-term memory</strong>. Long-term memory can be further divided into two major forms: 
-      Implicit Memory and Explicit Memory. Below, we will explore these two types of memory, their differences, 
-      how they are developed, and their role in our daily lives.</p>
-
-    <p>According to <a href="https://doi.org/10.3758/BF03198483" target="_blank">Parkin, Reid & Russo (1990)</a>, 
-      implicit and explicit memory differ in the way they process and retrieve information. 
-      Implicit memory involves unconscious tasks and automatic skills, whereas explicit memory 
-      requires deliberate and conscious effort to recall information.</p>
-
-    <h3>Implicit Memory</h3>
-    <p>
-        Implicit memory, also known as <strong>automatic memory</strong> or <strong>unconscious memory</strong>, refers to the retrieval and utilization of information without conscious awareness. It allows us to perform tasks automatically without deliberate effort.
-    </p>
-    <p>
-        Examples of implicit memory include riding a bicycle, playing an instrument, or brushing your teeth. These activities rely on motor skills and habits that we develop through repetition. Implicit memory plays a critical role in many daily tasks.
-    </p>
-
-    <h4>Subtypes of Implicit Memory</h4>
-    <ul>
-      <li><strong>Procedural Memory</strong>: Involves learned motor skills, such as walking, typing, or riding a bike.</li>
-      <li><strong>Conditioning</strong>: Occurs when a neutral stimulus becomes associated with a specific response, like associating the smell of smoke with fire.</li>
-      <li><strong>Priming</strong>: Links one stimulus to another, such as associating "red" with an apple or "green" with grass.</li>
-    </ul>
-
-    <p>
-        Implicit memory relies on brain regions such as the <strong>basal ganglia</strong>, <strong>cerebellum</strong>, and <strong>motor cortex</strong>. For instance, the basal ganglia supports gross motor functions (e.g., walking), while the cerebellum controls fine motor skills (e.g., holding a pen).
-    </p>
-
-    <h4>Development of Implicit Memory</h4>
-    <p>
-        Implicit memory develops primarily through <strong>repetition</strong> and practice. For example, a toddler learning to walk relies on explicit memory initially, but over time, walking becomes an automatic task stored in implicit memory. This shift allows us to perform tasks effortlessly without conscious thought.
-    </p>
-
-    <h3>Explicit Memory</h3>
-    <p>
-        Explicit memory, also called <strong>declarative memory</strong>, requires conscious effort to recall facts, events, or knowledge. Explicit memory allows us to consciously remember names, dates, or past experiences.
-    </p>
-
-    <h4>Subtypes of Explicit Memory</h4>
-    <ul>
-      <li><strong>Semantic Memory</strong>: General knowledge or facts not tied to specific personal experiences, such as knowing the capital of a country or historical events.</li>
-      <li><strong>Episodic Memory</strong>: Autobiographical memories of personal experiences, such as recalling your last vacation or the time of your graduation.</li>
-    </ul>
-
-    <p>
-        Explicit memory relies on brain regions such as the <strong>hippocampus</strong>, <strong>prefrontal cortex</strong>, and <strong>amygdala</strong>. For example, the hippocampus is critical for encoding and retrieving episodic memories.
-    </p>
-
-    <h4>Development of Explicit Memory</h4>
-    <p>
-        Unlike implicit memory, explicit memory can form after a single exposure to an event or piece of knowledge. For instance, remembering the date of a wedding or learning a fact in school involves explicit memory. However, these memories can be fragile and are prone to forgetting or distortion if not actively reviewed.
-    </p>
-
-    <h3>Differences Between Implicit and Explicit Memory</h3>
-    <p>
-        Implicit and explicit memory differ in their <strong>conscious involvement</strong>, <strong>retrieval processes</strong>, and the <strong>brain regions</strong> responsible for each. While implicit memory enables us to perform tasks without conscious effort, explicit memory involves the deliberate recall of facts and experiences. Both are critical for our ability to learn, adapt, and navigate the world.
-    </p>
-    
-    <h2>Related Media</h2>
-    <img src="meme.jpg" alt="Memory Meme">
-    <p>Want to dive deeper? Watch this insightful video:</p>
-    <a href="https://www.youtube.com/watch?v=J3OWYII3hmw" target="_blank">Watch Video on YouTube</a>
-
-    <h2>Test Your Knowledge</h2>
-    <div class="quiz">
-      <h3>Question 1</h3>
-      <p>Frank is trying to learn the names of all the students in his English course. Because Frank is actively and consciously remembering and recalling the names of students, this is considered ______ memory.</p>
-      <ul>
-        <li>A. Implicit</li>
-        <li>B. Explicit</li>
-        <li>C. Episodic</li>
-        <li>D. Procedural</li>
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <a class="navbar-brand" href="index.html">Memory Project</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbars" aria-controls="navbars" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbars">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="implicit.html">Implicit Memory</a></li>
+        <li class="nav-item"><a class="nav-link" href="explicit.html">Explicit Memory</a></li>
+        <li class="nav-item"><a class="nav-link" href="glossary.html">Glossary</a></li>
+        <li class="nav-item"><a class="nav-link" href="faq.html">FAQs</a></li>
       </ul>
-      <button onclick="showAnswer(1)">Show Answer</button>
-      <p id="answer1" style="display:none;"><strong>Answer:</strong> B. Explicit</p>
     </div>
-
-    <div class="quiz">
-      <h3>Question 2</h3>
-      <p>Katie is visiting Amsterdam, where riding bicycles is a common form of transportation. Even though she hasn’t ridden in a long time, Katie hops on and starts riding without actively thinking about what she is doing. Katie’s memory for riding a bicycle is an example of a(n) ______ memory.</p>
-      <ul>
-        <li>A. Implicit</li>
-        <li>B. Sensory</li>
-        <li>C. Semantic</li>
-        <li>D. Explicit</li>
-      </ul>
-      <button onclick="showAnswer(2)">Show Answer</button>
-      <p id="answer2" style="display:none;"><strong>Answer:</strong> A. Implicit</p>
-    </div>
-
-    <h2>Glossary of Terms</h2>
-    <div class="glossary">
-      <dl>
-        <dt>Implicit Memory</dt>
-        <dd>Memory that operates unconsciously, enabling skills and habits without deliberate effort.</dd>
-        <dt>Explicit Memory</dt>
-        <dd>Memory that requires conscious recall, such as facts and personal experiences.</dd>
-        <dt>Episodic Memory</dt>
-        <dd>Type of explicit memory related to personal events or experiences.</dd>
-        <dt>Semantic Memory</dt>
-        <dd>Type of explicit memory that deals with general knowledge and facts.</dd>
-      </dl>
-    </div>
-
-    <h2>FAQs</h2>
-    <div class="faq">
-      <h3>What is the difference between implicit and explicit memory?</h3>
-      <p>Implicit memory operates unconsciously and involves skills or habits, while explicit memory requires conscious recall of facts or events.</p>
-
-      <h3>Why is memory research important?</h3>
-      <p>Understanding memory helps improve learning techniques, treat memory-related disorders, and enhance daily cognitive functions.</p>
-    </div>
-  </section>
-
-  <footer>
+  </nav>
+  <div class="container my-4">
+    <section class="bg-white p-4 rounded shadow-sm mt-4">
+      <h2>Introduction</h2>
+      <p>Memory is one of the most essential cognitive functions our brains perform. It helps us interpret the world, make decisions, and communicate with others. Memory can be categorized in various ways such as short-term vs long-term memory, with long-term memory further divided into Implicit and Explicit Memory.</p>
+      <p>According to <a href="https://doi.org/10.3758/BF03198483" target="_blank">Parkin, Reid & Russo (1990)</a>, implicit and explicit memory differ in processing and retrieval of information. Implicit memory involves unconscious tasks and automatic skills, while explicit memory requires deliberate recall.</p>
+      <h3>Implicit Memory</h3>
+      <p>Implicit memory, also known as automatic or unconscious memory, allows us to perform tasks without consciously thinking about them. It is built through repetition and practice.</p>
+      <h3>Explicit Memory</h3>
+      <p>Explicit memory, or declarative memory, requires conscious effort to recall facts, events, and experiences. It is subdivided into semantic and episodic memory.</p>
+    </section>
+    <section class="bg-white p-4 rounded shadow-sm mt-4">
+      <h2>Related Media</h2>
+      <img src="meme.jpg" alt="Memory Meme" class="img-fluid rounded mb-3">
+      <p>Want to dive deeper? Watch this insightful video:</p>
+      <a href="https://www.youtube.com/watch?v=J3OWYII3hmw" target="_blank" class="btn btn-primary">Watch Video on YouTube</a>
+    </section>
+    <section class="bg-white p-4 rounded shadow-sm mt-4">
+      <h2>Test Your Knowledge</h2>
+      <div class="quiz border p-3 my-3">
+        <h3>Question 1</h3>
+        <p>Frank is trying to learn the names of all the students in his English course. Because Frank is actively and consciously remembering and recalling the names of students, this is considered ______ memory.</p>
+        <ul>
+          <li>A. Implicit</li>
+          <li>B. Explicit</li>
+          <li>C. Episodic</li>
+          <li>D. Procedural</li>
+        </ul>
+        <button onclick="showAnswer(1)" class="btn btn-info">Show Answer</button>
+        <p id="answer1" class="mt-2" style="display:none;"><strong>Answer:</strong> B. Explicit</p>
+      </div>
+      <div class="quiz border p-3 my-3">
+        <h3>Question 2</h3>
+        <p>Katie is visiting Amsterdam, where riding bicycles is a common form of transportation. Even though she hasn’t ridden in a long time, Katie hops on and starts riding without actively thinking. Katie’s memory for riding a bicycle is an example of a(n) ______ memory.</p>
+        <ul>
+          <li>A. Implicit</li>
+          <li>B. Sensory</li>
+          <li>C. Semantic</li>
+          <li>D. Explicit</li>
+        </ul>
+        <button onclick="showAnswer(2)" class="btn btn-info">Show Answer</button>
+        <p id="answer2" class="mt-2" style="display:none;"><strong>Answer:</strong> A. Implicit</p>
+      </div>
+    </section>
+  </div>
+  <footer class="bg-dark text-white text-center py-3">
     &copy; 2024 Understanding Memory Project | Designed with simplicity in mind.
   </footer>
-
-  <script>
-    function showAnswer(question) {
-      document.getElementById(`answer${question}`).style.display = 'block';
-    }
-  </script>
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="js/scripts.js"></script>
 </body>
 </html>
